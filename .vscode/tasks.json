@@ -1,0 +1,34 @@
+{
+    "version": "0.1.0",
+
+    "tasks": [{
+            "taskName": "lessc",
+            "command": "lessc",
+            "args": ["-sm=on", "app/static/styles/styles.less", "app/static/styles/styles.css"],
+            "isShellCommand": true,
+            "echoCommand": true,
+            "isBuildCommand": true
+        },
+        {
+            "taskName": "electron",
+            "command": "node_modules\\electron-prebuilt\\dist\\electron.exe",
+            "args": [
+                "--debug=5858",
+                "app"
+            ],
+            "isShellCommand": true,
+            "echoCommand": true
+        },
+        {
+            "taskName": "Django",
+            "command": "python",
+            "args": [
+                "server\\manage.py",
+                "runserver",
+                "8080"
+            ],
+            "isShellCommand": true,
+            "echoCommand": true
+        }
+    ]
+}

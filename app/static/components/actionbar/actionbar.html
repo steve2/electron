@@ -1,0 +1,16 @@
+
+<div class="actionbar dark window-drag">
+    <div class="items-left window-nodrag">
+        <button ng-repeat="action in actions" class="item" ng-style="itemHeight()" ui-sref="{{ action.state }}"
+                ng-class="{ 'active': (active == '{{ action.name }}') }">
+
+            {{ action.text }}
+
+        </button>
+    </div>
+    <div class="items-right window-nodrag" ng-show="isElectron()">
+        <button type="button" class="item control wndclose">
+            <span>&times;</span>
+        </button>
+    </div>
+</div>

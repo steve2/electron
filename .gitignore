@@ -1,0 +1,6 @@
+/node_modules
+/app/static/bower_components
+/env/
+/server/static
+migrations/
+__pycache__/

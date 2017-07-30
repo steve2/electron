@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="static/bower_components/tether/dist/css/tether.css" />
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="static/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="static/bower_components/nanoscroller/bin/css/nanoscroller.css" />
+    <link rel="stylesheet" href="static/styles/styles.css" />
+
+    <title>Electron Application</title>
+
+</head>
+
+<body>
+
+    <div ng-app="app">
+        <div ui-view></div>
+    </div>
+
+    <script type="text/javascript" src="static/bower_components/jquery/dist/jquery.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <script type="text/javascript" src="static/bower_components/tether/dist/js/tether.js"></script>
+    <script type="text/javascript" src="static/bower_components/moment/moment.js"></script>
+    <script type="text/javascript" src="static/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="static/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="static/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="static/bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="static/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="static/bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
+
+    <script type="text/javascript" src="static/scripts/electron.js"></script>
+    <script type="text/javascript" src="static/config.js"></script>
+    <script type="text/javascript" src="static/constants.js"></script>
+    <script type="text/javascript" src="static/routes.js"></script>
+
+    <script type="text/javascript" src="static/api/news/articles.js"></script>
+
+    <script type="text/javascript" src="static/components/ng-module.js"></script>
+    <script type="text/javascript" src="static/components/actionbar/actionbar.js"></script>
+    <script type="text/javascript" src="static/components/scroller/scroller.js"></script>
+    <script type="text/javascript" src="static/components/news/news.js"></script>
+
+    <script type="text/javascript" src="static/states/root.js"></script>
+    <script type="text/javascript" src="static/states/home/home.js"></script>
+    <script type="text/javascript" src="static/states/settings/settings.js"></script>
+    <script type="text/javascript" src="static/states/community/community.js"></script>
+
+</body>
+
+</html>

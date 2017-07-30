@@ -1,0 +1,23 @@
+
+<div class="news-wrapper">
+    <div class="news" ng-show="!isCreate(type)">
+
+        <h4 class="mb-0">{{ info.title }}</h4>
+
+        <h6 class="text-muted mb-0">{{ info.subtitle }}</h6>
+        <small>{{ info.author.username }} - <i>{{ info.dateCreated | date }}</i></small>
+
+        <p class="card-text">{{ info.text }}</p>
+
+    </div>
+    <div class="news" ng-show="isCreate(type)">
+
+        <button type="button" class="create">
+            <center class="pt-3 pb-3">
+                <h5 class="mb-0">NEW ARTICLE</h5>
+                <small>(click to create)</small>
+            </center>
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "N/A",
+  "main": "main.js",
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Borger",
+  "license": "ISC"
+}

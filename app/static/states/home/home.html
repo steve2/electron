@@ -1,0 +1,18 @@
+
+<div id="home">
+    
+    <div id="news-articles" ng-style="root.contentStyle()">
+        <scroller>
+
+            <news type="create"></news>
+
+            <news ng-repeat="article in home.news" info="article"></news>
+
+        </scroller>
+    </div>
+
+    <div id="other" ng-style="root.contentStyle()">
+        
+    </div>
+
+</div>

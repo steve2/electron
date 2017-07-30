@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900|Titillium+Web:900');
+
+@text-color: #bbb;
+
+h1, h2, h3, .h1, .h2, .h3 {
+  font-family: "Catamaran";
+}
+h1 {
+  font-size: 3rem;
+}
+h4, h5, h6, .h4, .h5, .h6 {
+  font-family: "Catamaran";
+}
+
+.window-drag {
+  -webkit-app-region: drag;
+}
+.window-nodrag {
+  -webkit-app-region: no-drag;
+}
+
+@nano-border-radius: 10px;
+@nano-pane-color: rgba(0, 0, 0, 0.18);
+@nano-scroller-color: rgba(0, 0, 0, 0.18);
+
+.nano {
+  & > .nano-content {
+    right: 0 !important;
+  }
+  & > .nano-pane {
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: @nano-pane-color;
+    border-radius: @nano-border-radius;
+    & > .nano-slider {
+      background: @nano-scroller-color;
+      border-radius: @nano-border-radius;
+    }
+  }
+}
+
+#root {
+  color: @text-color;
+}
+
+@import "bootstrap.less";
+@import "buttons.less";
+@import "../states/home/home.less";
+@import "../components/actionbar/actionbar.less";

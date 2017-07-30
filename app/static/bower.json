@@ -1,0 +1,27 @@
+{
+  "name": "static",
+  "authors": [
+    "Steve <b0rg3r@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.4",
+    "angular-cookies": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "font-awesome": "^4.7.0",
+    "angular": "^1.6.4",
+    "bootstrap": "v4.0.0-alpha.6",
+    "nanoscroller": "^0.8.7",
+    "moment": "^2.18.1"
+  }
+}

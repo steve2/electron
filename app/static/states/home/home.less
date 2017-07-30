@@ -1,0 +1,46 @@
+
+@right-bg-color: #333;
+@left-bg-color: #2a2a2a;
+
+@article-create-color: #222;
+
+#news-articles {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: @left-bg-color;
+
+    .news-wrapper {
+        margin: 8px 8px 0px 8px;
+        .news {
+            padding: 6px;
+            color: #999;
+            &:hover {
+                color: #ddd;
+            }
+
+            button.create {
+                width: 100%;
+                color: (@article-create-color + #1f1f1f);
+                background-color: @article-create-color;
+                border: 3px dashed (@article-create-color + #1f1f1f);
+                &:hover {
+                    color: (@article-create-color + #666);
+                    background-color: (@article-create-color + #030303);
+                    border-color: (@article-create-color + #1f1f1f);
+                }
+            }
+        }
+    }
+}
+
+#other {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(100vw - 300px);
+    background-color: @right-bg-color;
+}
