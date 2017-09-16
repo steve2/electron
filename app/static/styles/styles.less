@@ -1,17 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Catamaran:900|Titillium+Web:900');
 
-@text-color: #bbb;
-
-h1, h2, h3, .h1, .h2, .h3 {
-  font-family: "Catamaran";
-}
-h1 {
-  font-size: 3rem;
-}
-h4, h5, h6, .h4, .h5, .h6 {
-  font-family: "Catamaran";
-}
+@text-color: #eee;
 
 .window-drag {
   -webkit-app-region: drag;
@@ -25,9 +15,6 @@ h4, h5, h6, .h4, .h5, .h6 {
 @nano-scroller-color: rgba(0, 0, 0, 0.18);
 
 .nano {
-  & > .nano-content {
-    right: 0 !important;
-  }
   & > .nano-pane {
     top: 2px;
     bottom: 2px;
@@ -41,11 +28,36 @@ h4, h5, h6, .h4, .h5, .h6 {
   }
 }
 
+.wndclose {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 11px;
+
+  & > span {
+    font-size: 26pt;
+    position: relative;
+    bottom: 13px;
+    right: 2px;
+  }
+}
+
 #root {
   color: @text-color;
 }
 
+.smallcaps {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
 @import "bootstrap.less";
 @import "buttons.less";
+@import "text.less";
 @import "../states/home/home.less";
+@import "../states/debug/debug.less";
+@import "../states/login/login.less";
 @import "../components/actionbar/actionbar.less";
+@import "../components/article/article.less";
+@import "../components/sidebar/sidebar.less";

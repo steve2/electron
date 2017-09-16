@@ -10,11 +10,15 @@
     function root($timeout) {
         var ct = this;
 
+        // expose moment.js to templates.
+        ct.moment = moment;
+
         ct.actionbar = {
             actions: [
                 { name: 'home', text: 'Home', state: 'root.home' },
-                { name: 'community', text: 'Community', state: 'root.community' },
-                { name: 'settings', text: 'Settings', state: 'root.settings' }
+                { name: 'community', text: 'Community', state: 'root.community', disabled: true },
+                { name: 'settings', text: 'Settings', state: 'root.settings', disabled: true },
+                { name: 'debug', text: 'Debug', state: 'root.debug' }
             ]
         };
 
@@ -38,6 +42,19 @@
                 'margin-top': ct.navbarHeight() + 'px'
             };
         };
+        
+        // Returns true if the application is running under Electron.
+        ct.isElectron = function() {
+            if (typeof require !== 'function') return false;
+            if (typeof window !== 'object') return false;
+            try {
+                const electron = require('electron');
+                if (typeof electron !== 'object') return false;
+            } catch (e) {
+                return false;
+            }
+            return true;
+        }
 
     }
 

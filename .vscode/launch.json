@@ -10,7 +10,7 @@
             "request": "launch",
             "name": "Django",
             "stopOnEntry": false,
-            "pythonPath": "C:/Users/Steve/Dropbox/Programming/projects/web/electron/env/Scripts/python.exe",
+            "pythonPath": "${workspaceRoot}/env/Scripts/python.exe",
             "program": "${workspaceRoot}/server/manage.py",
             "args": [
                 "runserver",
@@ -21,7 +21,7 @@
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
-            ],
+            ]
         }
     ]
 }

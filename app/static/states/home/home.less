@@ -2,45 +2,45 @@
 @right-bg-color: #333;
 @left-bg-color: #2a2a2a;
 
-@article-create-color: #222;
+@article-create-bg-color: #2f2f2f;
+@article-create-bg-color-alt: #2f2f2f;
+@article-create-color: #aaa;
+@article-create-color-alt: #ddd;
+@sidebar-size: 250px;
 
-#news-articles {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 300px;
-    background-color: @left-bg-color;
-
-    .news-wrapper {
-        margin: 8px 8px 0px 8px;
-        .news {
-            padding: 6px;
-            color: #999;
-            &:hover {
-                color: #ddd;
-            }
-
-            button.create {
-                width: 100%;
-                color: (@article-create-color + #1f1f1f);
-                background-color: @article-create-color;
-                border: 3px dashed (@article-create-color + #1f1f1f);
-                &:hover {
-                    color: (@article-create-color + #666);
-                    background-color: (@article-create-color + #030303);
-                    border-color: (@article-create-color + #1f1f1f);
-                }
-            }
-        }
-    }
+.layout-item {
+  margin: 8px 8px 0px 8px;
 }
 
-#other {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: calc(100vw - 300px);
-    background-color: @right-bg-color;
+#main {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(100vw - @sidebar-size);
+  background-color: @right-bg-color;
+
+  .date {
+    padding-bottom: 8px;
+    .layout-item;
+
+    .row:first-of-type {
+      color: #888;
+    }
+  }
+
+  .create {
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #444;
+  }
+}
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: @sidebar-size;
+  background-color: @left-bg-color;
 }

@@ -1,18 +1,49 @@
 
 <div id="home">
+
+    <div id="sidebar" ng-style="root.contentStyle()">
+
+        <sidebar items="home.items"></sidebar>        
+
+    </div>
     
-    <div id="news-articles" ng-style="root.contentStyle()">
+    <div id="main" ng-style="root.contentStyle()">
+
         <scroller>
 
-            <news type="create"></news>
+            <div class="create">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mr-2">
+                            <h6 class="mb-0 mt-2">Headline:</h6>
+                            <input type="text" placeholder="Enter article headline..." />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mr-2">
+                            <h6 class="mb-0 mt-2">Subtext:</h6>
+                            <input type="text" placeholder="Enter article subtext..." />
+                        </div>
+                    </div>
+                </div>
 
-            <news ng-repeat="article in home.news" info="article"></news>
+                <h6 class="mb-0 mt-2">Description:</h6>
+                <autotext placeholder="Enter article description..."></autotext>
+            </div>
+
+            <div class="date" ng-repeat="(date, articles) in home.articlesByDate">
+
+                <div class="row">
+                    {{ date }}
+                </div>
+                <div class="row">
+                    <div class="col-lg-4" ng-repeat="article in articles">
+                        <article data="article" controls="home.articleControls"></article>
+                    </div>
+                </div>
+            </div>
 
         </scroller>
-    </div>
-
-    <div id="other" ng-style="root.contentStyle()">
-        
     </div>
 
 </div>

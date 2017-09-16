@@ -1,0 +1,31 @@
+<div class="wrapper col">
+    <div class="content" ng-class="{ disabled: data.deleted }">
+
+        <div class="title">
+            <b>{{ data.title }}</b> <span ng-show="data.deleted">(deleted)</span>
+        </div>
+
+        <small>
+            {{ data.author.username }} - {{ timeOfDay(data.dateCreated) }}
+        </small>
+
+        <p class="card-text">{{ data.text }}</p>
+
+        <div class="modified">
+            <sub><i>Last edited {{ fromNow(data.lastModified) }}</i></sub>
+        </div>
+
+        <div class="controls">
+            <button class="delete" ng-click="controls.delete(data)" ng-show="!data.deleted" title="Delete Article">
+                <i class="fa fa-trash"></i>
+            </button>
+            <button class="restore" ng-click="controls.restore(data)" ng-show="data.deleted" title="Restore Article">
+                <i class="fa fa-paste"></i>
+            </button>
+            <button class="destroy" ng-click="controls.destroy(data)" ng-show="data.deleted" title="Destroy Article">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+    </div>
+</div>

@@ -18,9 +18,37 @@ class ArticleManager(models.Manager):
         try:
             article = Article.objects.get(id=id)
         except:
-            return (False, None)
+            return None
         if serialize:
             serialized = ArticleSerializer(article)
-            return (True, serialize)
+            return serialized.data
         else:
-            return (True, article)
+            return article
+
+    @staticmethod
+    def Create(author, data):
+        serialized = ArticleSerializer(data=data, partial=True)
+        if serialized.is_valid():
+            instance = serialized.save(author)
+            if instance:
+                serialized = ArticleSerializer(instance)
+                return (True, serialized.data)
+        return (False, serialized.errors,)
+
+    @staticmethod
+    def Update(id, data, serialize=True):
+        article = ArticleManager.Find(id, False)
+        if article is not None:
+            serialized = ArticleSerializer(article, data=data, partial=True)
+            if serialized.is_valid():
+                instance = serialized.save()
+                if instance:
+                    if serialize:
+                        return serialized.data
+                    else:
+                        return instance
+        return None
+
+    @staticmethod
+    def Delete(ids):
+        return Article.objects.filter(pk__in=ids).delete()

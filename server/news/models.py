@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from shared.models import DeleteRecord
 
 # Create your models here.
 
-class Article(models.Model):
+class Article(DeleteRecord):
     """
     Represents a news article as displayed on the Home page.
     """

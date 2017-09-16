@@ -1,0 +1,22 @@
+
+<div id="debug" ng-style="root.contentStyle()">
+    
+    <div class="console">
+        <div class="output">
+
+            <div ng-repeat="line in debug.outputLines track by $index">
+                {{ line }}
+            </div>
+
+        </div>
+        <div class="input">
+
+            <div class="prompt">></div>
+
+            <form ng-submit="debug.execute(debug.command)">
+                <input type="text" ng-model="debug.command" placeholder="Execute..." />
+            </form>
+        </div>
+    </div>
+
+</div>

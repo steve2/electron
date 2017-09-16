@@ -21,13 +21,17 @@ from django.contrib import admin
 from server import settings
 from server.views import index
 
+from auth2.views import login
+from auth2.views import logout
+
 urlpatterns = [
 
     # Serve adminsitrator views.
     url(r'^admin/', admin.site.urls),
 
-    # REST API
+    # REST API.
     url(r'^api/news/', include('news.urls')),
+    url(r'^api/auth/', include('auth2.urls')),
 
     # Serve `index.html`.
     url(r'^.*$', index)

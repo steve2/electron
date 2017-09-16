@@ -1,0 +1,31 @@
+
+<div class="sidebar dark">
+
+    <scroller>
+        <div class="items">
+
+            <div class="items-group" ng-repeat="(name, group) in items">
+
+                <div class="sidebar-title">
+                    {{ name }}
+                </div>
+
+                <div class="sidebar-item" ng-repeat="(name, control) in group">
+                    <button type="button" class="{{ name }}">
+                        <div class="icon">
+                            <i class="fa {{ control.icon }} fa-2x"></i>
+                        </div>
+                        <div class="text">
+                            <span class="ml-1" style="position:relative;bottom:2px;">
+                                {{ control.text }}
+                            </span>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </scroller>
+
+</div>
