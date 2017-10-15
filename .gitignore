@@ -2,5 +2,6 @@
 /app/static/bower_components
 /env/
 /server/static
+/server/db.sqlite3
 migrations/
 __pycache__/
