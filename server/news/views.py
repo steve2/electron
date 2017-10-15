@@ -8,7 +8,7 @@ from news.managers import ArticleManager
 @api_view(['GET', 'POST', 'DELETE',])
 def articles(request):
     """
-    Multiple article requests.
+    Multiple article request.
 
     """
     if not request.user.is_authenticated and request.method == 'POST':
@@ -35,7 +35,7 @@ def articles(request):
 @api_view(['GET', 'POST', 'DELETE',])
 def article(request, articleid):
     """
-    Single article requests.
+    Single article request.
 
     """
     if request.method == 'GET':

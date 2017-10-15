@@ -251,6 +251,25 @@ textarea {
   left: 0;
   background: linear-gradient(0deg, #333, #3f3f3f);
 }
+#login .wndclose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin-top: 0px;
+  border: none;
+  background: none;
+  color: #9a9a9a;
+}
+#login .wndclose:hover {
+  cursor: pointer;
+  color: #eee;
+}
+#login .wndclose:active {
+  color: #ccc;
+}
+#login .wndclose:active:hover {
+  cursor: initial;
+}
 #login .wrapper {
   display: table;
   height: 100%;
@@ -329,10 +348,10 @@ textarea {
 }
 .actionbar .item:hover:not(:disabled) {
   cursor: pointer;
-  color: #ccc;
+  color: #eee;
 }
 .actionbar .item.active {
-  color: #eee;
+  color: #ccc;
 }
 .actionbar .item.active:hover {
   cursor: initial;

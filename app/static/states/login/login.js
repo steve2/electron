@@ -10,8 +10,6 @@
     function login($scope, sessions) {
         var ct = this;
 
-        ct.isElectron = isElectron();
-
         ct.login = _login;
 
         function _login(username, password) {
